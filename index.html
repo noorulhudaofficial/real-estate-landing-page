@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real Estate Landing Page</title>
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+<!-- ================= NAVBAR ================= -->
+<nav class="fixed w-full bg-white shadow z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-5 py-4">
+
+    <h1 class="text-2xl font-bold text-blue-600">Dream Homes</h1>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex space-x-10 text-lg font-semibold">
+      <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+      <li><a href="#properties" class="hover:text-blue-600">Properties</a></li>
+      <li><a href="#features" class="hover:text-blue-600">Features</a></li>
+      <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+    </ul>
+
+    <!-- Hamburger -->
+    <button id="menuBtn" class="md:hidden text-3xl">&#9776;</button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <ul id="mobileMenu" class="hidden md:hidden flex-col bg-white px-5 pb-4 space-y-4 text-lg">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#properties">Properties</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<script>
+  document.getElementById("menuBtn").onclick = () => {
+    document.getElementById("mobileMenu").classList.toggle("hidden");
+  };
+</script>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="h-screen w-full bg-cover bg-center flex items-center"
+  style="background-image: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914');">
+
+  <div class="bg-black bg-opacity-50 w-full h-full flex items-center px-8">
+    <div class="text-white max-w-2xl" data-aos="fade-up">
+      <h1 class="text-4xl md:text-6xl font-bold">
+        Find Your Perfect Home
+      </h1>
+      <p class="mt-4 text-lg">
+        Explore top-rated properties in your budget with our premium real estate listings.
+      </p>
+
+      <a href="#properties"
+        class="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-700">
+        View Properties
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SEARCH BAR ================= -->
+<div class="max-w-5xl mx-auto -mt-12 bg-white shadow-xl p-6 rounded-xl relative z-20">
+  <div class="grid md:grid-cols-3 gap-4">
+    <input type="text" placeholder="Location" class="border p-3 rounded w-full">
+    <input type="text" placeholder="Property Type" class="border p-3 rounded w-full">
+    <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+      Search
+    </button>
+  </div>
+</div>
+
+<!-- ================= PROPERTIES ================= -->
+<section id="properties" class="py-20 px-6">
+  <h2 class="text-3xl font-bold text-center mb-12">Featured Properties</h2>
+
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+
+    <!-- Card 1 -->
+    <div class="bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-2xl transition">
+      <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c"
+        class="w-full h-52 object-cover">
+      <div class="p-5">
+        <h3 class="text-xl font-bold">Modern Family House</h3>
+        <p class="text-gray-600 mt-2">4 Bed • 3 Bath • 2100 sqft</p>
+        <p class="text-blue-600 font-bold text-lg mt-3">$320,000</p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-2xl transition">
+      <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914"
+        class="w-full h-52 object-cover">
+      <div class="p-5">
+        <h3 class="text-xl font-bold">Luxury Villa</h3>
+        <p class="text-gray-600 mt-2">5 Bed • 4 Bath • 3500 sqft</p>
+        <p class="text-blue-600 font-bold text-lg mt-3">$620,000</p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-2xl transition">
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994"
+        class="w-full h-52 object-cover">
+      <div class="p-5">
+        <h3 class="text-xl font-bold">Cozy Apartment</h3>
+        <p class="text-gray-600 mt-2">2 Bed • 1 Bath • 900 sqft</p>
+        <p class="text-blue-600 font-bold text-lg mt-3">$180,000</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section id="features" class="py-20 px-6 bg-gray-100">
+  <h2 class="text-3xl font-bold text-center mb-12">Why Choose Us?</h2>
+
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+
+    <div class="bg-white p-8 shadow rounded-xl text-center">
+      <h3 class="text-xl font-bold">Verified Listings</h3>
+      <p class="text-gray-600 mt-3">All properties are fully verified and inspected.</p>
+    </div>
+
+    <div class="bg-white p-8 shadow rounded-xl text-center">
+      <h3 class="text-xl font-bold">Trusted Agents</h3>
+      <p class="text-gray-600 mt-3">Experienced and certified property consultants.</p>
+    </div>
+
+    <div class="bg-white p-8 shadow rounded-xl text-center">
+      <h3 class="text-xl font-bold">Easy Buy & Rent</h3>
+      <p class="text-gray-600 mt-3">Simple and fast process to buy or rent homes.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="py-20 px-6">
+  <h2 class="text-3xl font-bold text-center mb-10">Contact Us</h2>
+
+  <form class="max-w-3xl mx-auto bg-white shadow-xl p-8 rounded-xl space-y-4">
+    <input type="text" placeholder="Your Name" class="w-full border p-3 rounded">
+    <input type="email" placeholder="Your Email" class="w-full border p-3 rounded">
+    <textarea placeholder="Your Message" class="w-full border p-3 rounded h-32"></textarea>
+
+    <button class="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700">
+      Send Message
+    </button>
+  </form>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-blue-600 text-white text-center py-6">
+  <p class="text-lg">© 2025 Dream Homes — All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
